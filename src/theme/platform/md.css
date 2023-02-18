@@ -53,6 +53,6 @@ ion-header.ios:not(.header-collapse-condense-inactive) #rnPickerModalButton {
     background: transparent !important;
 }
 
-ion-back-button::part(text) {
+.md ion-back-button::part(text) {
     display: none;
 }

@@ -26,6 +26,8 @@
 	import { NotificationBadge } from 'capacitor-notification-badge';
 
 	import { Network } from '@capacitor/network';
+
+	import { Dialog } from '@capacitor/dialog';
 	
 	import timetableEdit from '@/functions/utils/timetableEdit.js';
 	import subjectColor from '@/functions/utils/subjectColor.js';
@@ -347,14 +349,11 @@
 				}, 1000);
 			},
 			async displayBetaMsg() {
-				const alert = await alertController.create({
-					header: 'Page d\'accueil',
+				await Dialog.alert({
+					title: 'Page d\'accueil',
 					message: 'Cette page est en cours de développement. Elle ne contient pas tous le contenu prévu et subira de multiples changements dans l\'avenir.',
-					mode: 'md',
-					buttons: ['Je comprends']
+					buttonTitle: 'Je comprends'
 				});
-
-				await alert.present();
 			}
 		},
 		async mounted() {
