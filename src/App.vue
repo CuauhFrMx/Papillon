@@ -436,10 +436,10 @@
                 </div>
             </div>
         </ion-header>
-        <ion-content mode="md">
+        <ion-content>
           <ion-list id="inbox-list"> 
             <router-link @click="changePage(p.url)" class="navLink" :to="`${p.url}`" v-for="(p, i) in appPages" :key="i">
-                <ion-item button mode="md" lines="none" :detail="false" @click="selectedIndex = i" :class="{ selected: selectedIndex === i }">
+                <ion-item button lines="none" :detail="false" @click="selectedIndex = i" :class="{ selected: selectedIndex === i }">
                     <span class="material-symbols-outlined mdls" slot="start">{{ p.icon }}</span>
                     <ion-label>{{ p.title }}</ion-label>
                 </ion-item>
@@ -676,6 +676,22 @@
     ion-menu .router-link-active ion-item {
         --background: rgba(var(--ion-color-primary-rgb), 0.14);
         color: var(--ion-color-primary-rgb);
+    }
+
+    .ios ion-menu ion-item {
+        --padding-start: 16px;
+        --padding-end: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px !important;
+        font-weight: 400 !important;
+        border-radius: 8px !important;
+    }
+
+    .ios ion-menu ion-content {
+        --padding-start: 8px;
+        --padding-end: 8px;
+        --padding-top: 5px;
+        --padding-bottom: 20px;
     }
 
     ion-menu ion-item .mdls {
