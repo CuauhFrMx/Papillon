@@ -16,9 +16,6 @@
 	import displayToast from '@/functions/utils/displayToast.js';
     import PapillonBackButton from '@/components/PapillonBackButton.vue';
 
-    const FastAverageColor = require('fast-average-color').FastAverageColor;
-    const fac = new FastAverageColor();
-
     import { FilePicker } from '@capawesome/capacitor-file-picker';
 
     import { Dialog } from '@capacitor/dialog';
@@ -70,16 +67,6 @@
                         localStorage.setItem('customAvatar', newImage);
                         document.dispatchEvent(new CustomEvent('userDataUpdated'));
 
-                        fac.getColorAsync(newImage)
-                            .then(color => {
-                                localStorage.setItem('averageColorCustom', JSON.stringify(color));
-                                
-                                document.dispatchEvent(new CustomEvent('averageColorUpdated'));
-                            })
-                            .catch(e => {
-                                console.log(e);
-                            });
-
                         displayToast.presentNativeToast(
                             'Photo de profil modifiée.'
                         );
@@ -94,7 +81,6 @@
             },
             tweakDeleteAvatar() {
                 localStorage.removeItem('customAvatar');
-                localStorage.removeItem('averageColorCustom');
                 document.dispatchEvent(new CustomEvent('userDataUpdated'));
 
                 displayToast.presentNativeToast(
