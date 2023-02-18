@@ -388,14 +388,14 @@
 
 <template>
 	<ion-page ref="page">
-		<IonHeader class="AppHeader" collapse="fade">
+		<IonHeader class="AppHeader">
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<ion-menu-button color="dark" mode="md"></ion-menu-button>
+					<ion-menu-button color="dark"></ion-menu-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Vue d'ensemble <ion-chip class="beta-chip" color="warning" @click="displayBetaMsg()">BETA</ion-chip></ion-title>
+				<ion-title>Vue d'ensemble <ion-chip class="beta-chip" color="warning" @click="displayBetaMsg()">BETA</ion-chip></ion-title>
 			</IonToolbar>
 		</IonHeader>
 
@@ -600,7 +600,7 @@
 	}
 
 	.ios .nextCours::part(native) {
-		background: var(--ion-plain-background-color);
+		background: var(--ion-inset-background);
 		border-radius: 12px;
 		padding: 5px 15px;
 

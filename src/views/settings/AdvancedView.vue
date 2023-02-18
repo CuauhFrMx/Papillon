@@ -7,6 +7,7 @@
 		IonItem,
 		IonLabel,
 		IonButtons,
+		IonBackButton,
 		IonTitle,
 		IonContent,
 		IonNavLink,
@@ -27,7 +28,7 @@
 			IonHeader,
 			IonToolbar,
 			IonButtons,
-			PapillonBackButton,
+			IonBackButton,
 			IonList,
 			IonItem,
 			IonLabel,
@@ -177,18 +178,24 @@
 </script>
 
 <template>
-		<IonHeader class="AppHeader" collapse="fade" translucent>
+		<IonHeader class="AppHeader" translucent>
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<PapillonBackButton></PapillonBackButton>
+					<ion-back-button @click="pop" text="Paramètres" default-href="/"></ion-back-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Options avancées</ion-title>
+				<ion-title>Options avancées</ion-title>
 			</IonToolbar>
 		</IonHeader>
 
 		<ion-content :fullscreen="true">
+			<IonHeader collapse="condense">
+				<IonToolbar>
+					<ion-title size="large">Options avancées</ion-title>
+				</IonToolbar>
+			</IonHeader>
+
 			<IonList :inset="true" lines="inset">
 				<IonItem button @click="emptyCache()">
 					<span class="material-symbols-outlined mdls" slot="start">auto_delete</span>

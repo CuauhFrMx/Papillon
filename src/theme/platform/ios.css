@@ -1,0 +1,55 @@
+/* items */
+ion-list.list-inset {
+    background : var(--ion-inset-background) !important;
+    border-radius: 10px !important;
+}
+
+ion-list.list-inset > * {
+    --background : var(--ion-inset-background) !important;
+}
+
+ion-list.list-inset ion-list-header {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ion-list.list-inset ion-list-header ion-button {
+    margin: 0 !important;
+}
+
+ion-list.list-inset.md ion-list-header {
+    border-radius: 8px 8px 0px 0px !important;
+    overflow: hidden;
+}
+
+ion-list.list-inset.md ion-item:last-child {
+    border-radius: 0px 0px 8px 8px !important;
+    overflow: hidden;
+}
+
+ion-list.list-inset ion-list-header, ion-list.list-inset ion-item {
+    --background : var(--ion-inset-background) !important;
+}
+
+ion-list.list-inset.ios ion-list-header ion-label {
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ion-list.list-inset.md ion-list-header {
+    padding-top: 8px;
+}
+
+.ios ion-list.list-inset {
+    --ion-inset-background: var(--ion-plain-background-color) !important;
+    box-shadow: var(--ion-box-shadow) !important;
+    border-radius: 12px !important;
+}
+
+/* title */
+.ios ion-title.md {
+    font-size: 18px;
+    font-weight: 600 !important;
+}

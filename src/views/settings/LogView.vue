@@ -17,6 +17,7 @@
 		IonItemOptions,
 		IonButtons,
 		IonButton,
+		IonBackButton,
 		IonLabel,
 		IonContent,
 		IonPage,
@@ -33,7 +34,7 @@
 		components: {
 			IonHeader,
 			IonToolbar,
-			PapillonBackButton,
+			IonBackButton,
 			IonButtons,
 			IonButton,
 			IonLabel,
@@ -221,14 +222,14 @@ Contient **${this.logs.length}** logs
 
 <template>
 	<ion-page ref="page">
-		<IonHeader class="AppHeader" collapse="fade" translucent>
+		<IonHeader class="AppHeader" translucent>
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<PapillonBackButton></PapillonBackButton>
+					<ion-back-button @click="pop" text="Options avancées" default-href="/"></ion-back-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Logs</ion-title>
+				<ion-title>Logs</ion-title>
 
 				<ion-buttons slot="end">
 					<IonButton @click="share()">
@@ -242,6 +243,7 @@ Contient **${this.logs.length}** logs
 		</IonHeader>
 
 		<ion-content :fullscreen="true">
+			
 			<ion-refresher slot="fixed" @ionRefresh="handleRefresh($event)">
 				<ion-refresher-content></ion-refresher-content>
 			</ion-refresher>

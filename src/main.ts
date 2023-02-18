@@ -30,6 +30,9 @@ import './theme/fixes.css';
 import './theme/fonts.css';
 import './theme/theme.css';
 
+import './theme/platform/md.css';
+import './theme/platform/ios.css';
+
 // TypeScript custom components
 require('@/functions/app.ts');
 

@@ -15,19 +15,8 @@ ion-item.animated {
     filter: opacity(0);
 }
 
-@keyframes elementShow {
-    0% {
-        transform: translateY(10px);
-        filter: opacity(0);
-    }
-    100% {
-        transform: translateY(0);
-        filter: opacity(1);
-    }
-}
-
-* {
-    user-select: none;
+ion-list.list-inset ion-list-header, ion-list.list-inset ion-item {
+    --background : var(--ion-inset-background) !important;
 }
 
 #noTouchZone {

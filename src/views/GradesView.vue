@@ -293,10 +293,10 @@
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<ion-menu-button color="dark" mode="md"></ion-menu-button>
+					<ion-menu-button color="dark"></ion-menu-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Notes</ion-title>
+				<ion-title>Notes</ion-title>
 
 				<ion-spinner slot="end" v-if="isLoading"></ion-spinner>
 			</IonToolbar>

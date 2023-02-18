@@ -1,6 +1,6 @@
 <script>
   import { defineComponent } from 'vue';
-  import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonList, IonModal, IonItem, IonDatetime, IonRefresher, IonRefresherContent, IonLabel, IonSpinner, IonFab, IonInput } from '@ionic/vue';
+  import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonList, IonModal, IonItem, IonDatetime, IonRefresher, IonRefresherContent, IonLabel, IonSpinner, IonFab, IonInput, IonBackButton } from '@ionic/vue';
 
   import { Share } from '@capacitor/share';
 
@@ -45,7 +45,7 @@
         IonLabel,
         IonSpinner,
         IonFab,
-        IonInput
+        IonInput,
     },
     setup() {
         return {
@@ -603,14 +603,14 @@
 
 <template>
     <ion-page ref="page">
-      <IonHeader class="AppHeader" collapse="fade" translucent>
+      <IonHeader class="AppHeader" translucent>
         <IonToolbar>
 
           <ion-buttons slot="start">
-            <ion-menu-button color="dark" mode="md"></ion-menu-button>
+            <ion-menu-button color="dark"></ion-menu-button>
           </ion-buttons>
 
-          <ion-title mode="md">Ma journée</ion-title>
+          <ion-title>Ma journée</ion-title>
 
           <ion-buttons slot="end">
             <ion-button mode="md" id="rnPickerModalButton" color="dark" @click="changernPickerModalOpen(true)">

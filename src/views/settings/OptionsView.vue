@@ -11,13 +11,13 @@
 		IonLabel,
 		IonToggle,
 		IonButtons,
+		IonBackButton,
 		IonTitle,
 		IonContent,
 		alertController
 	} from '@ionic/vue';
 
 	import displayToast from '@/functions/utils/displayToast.js';
-	import PapillonBackButton from '@/components/PapillonBackButton.vue';
 
 	export default defineComponent({
 		name: 'FolderPage',
@@ -25,13 +25,13 @@
 			IonHeader,
 			IonToolbar,
 			IonButtons,
-			PapillonBackButton,
 			IonList,
 			IonItem,
 			IonLabel,
 			IonToggle,
 			IonTitle,
-			IonContent
+			IonContent,
+			IonBackButton
 		},
 		data() {
 			return {
@@ -39,6 +39,7 @@
 			}
 		},
 		methods: {
+			
 			changeTick(option) {
 				let el = this.$refs[option];
 				let elChecked = el.$el.checked;
@@ -151,14 +152,14 @@
 </script>
 
 <template>
-		<IonHeader class="AppHeader" collapse="fade" translucent>
+		<IonHeader class="AppHeader" translucent>
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<PapillonBackButton></PapillonBackButton>
+					<ion-back-button @click="pop" text="Paramètres" default-href="/"></ion-back-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Options</ion-title>
+				<ion-title>Options</ion-title>
 			</IonToolbar>
 		</IonHeader>
 

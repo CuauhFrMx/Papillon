@@ -105,14 +105,14 @@
 
 <template>
     <ion-page ref="page">
-      <IonHeader class="AppHeader" collapse="fade" translucent>
+      <IonHeader class="AppHeader" translucent>
         <IonToolbar>
 
           <ion-buttons slot="start">
-            <ion-menu-button color="dark" mode="md"></ion-menu-button>
+            <ion-menu-button color="dark"></ion-menu-button>
           </ion-buttons>
 
-          <ion-title mode="md">Actualités</ion-title>
+          <ion-title>Actualités</ion-title>
         </IonToolbar>
         <IonToolbar class="only-md">
             <ion-searchbar ref="searchBarMd" placeholder="Rechercher une actualité, une personne..." @ionChange="searchNews()"></ion-searchbar>

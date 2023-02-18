@@ -513,16 +513,6 @@
 </template>
 
 <style scoped>
-    ion-menu::part(container) {
-        border-radius: 0px 20px 20px 0px;
-    }
-
-    @media screen and (min-width: 992px) {
-        ion-menu::part(container) {
-            border-radius: 0px 0px 0px 0px;
-        }
-    }
-
     ion-menu ion-list {
         background: none;
     }

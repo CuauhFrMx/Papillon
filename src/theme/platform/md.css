@@ -1,0 +1,54 @@
+/* (MD) Toolbar */
+.header-md {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.dark .header-md {
+    border-bottom: 1px solid #363636;
+}
+
+.header-md::after {
+    background: none;
+}
+
+.header-md .buttons-last-slot {
+    padding-right: 5px;
+}
+
+/* (MD) Calendar button */
+#rnPickerModalButton {
+    background: var(--ion-color-step-50) !important;
+    border-radius: 300px;
+
+    height: 36px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    transition: background 0.2s;
+}
+
+body.dark #rnPickerModalButton {
+    background-color: #ffffff11;
+}
+
+#rnPickerModalButton span {
+    margin-left: 3px;
+}
+
+#rnPickerModalButton p {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: none;
+    letter-spacing: normal;
+
+    margin-right: 3px;
+}
+
+#rnPickerModalButton.ios {
+    margin-right: 5px !important;
+}
+
+ion-header.ios:not(.header-collapse-condense-inactive) #rnPickerModalButton {
+    background: transparent !important;
+}

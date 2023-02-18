@@ -10,6 +10,7 @@
 		IonItem,
 		IonButtons,
 		IonButton,
+		IonBackButton,
 		IonLabel,
 		IonRadioGroup,
 		IonRadio,
@@ -30,7 +31,7 @@
 			IonList,
 			IonRadioGroup,
 			IonRadio,
-			PapillonBackButton,
+			IonBackButton,
 			IonToggle
 		},
 		data() {
@@ -140,14 +141,14 @@
 </script>
 
 <template>
-		<IonHeader class="AppHeader" collapse="fade" translucent>
+		<IonHeader class="AppHeader" translucent>
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<PapillonBackButton></PapillonBackButton>
+					<ion-back-button @click="pop" text="Paramètres" default-href="/"></ion-back-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Personnaliser Papillon</ion-title>
+				<ion-title>Personnaliser</ion-title>
 
 				<ion-buttons slot="end">
 					<IonButton @click="reset()">Réinitialiser</IonButton>

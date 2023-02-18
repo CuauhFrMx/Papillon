@@ -9,6 +9,7 @@
 		IonItem,
 		IonLabel,
         IonButtons,
+        IonBackButton,
         IonTitle,
         IonContent,
 	} from '@ionic/vue';
@@ -26,7 +27,7 @@
 			IonHeader,
 			IonToolbar,
             IonButtons,
-            PapillonBackButton,
+            IonBackButton,
             IonList,
             IonItem,
             IonLabel,
@@ -130,14 +131,14 @@
 </script>
 
 <template>
-		<IonHeader class="AppHeader" collapse="fade" translucent>
+		<IonHeader class="AppHeader" translucent>
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<PapillonBackButton></PapillonBackButton>
+					<ion-back-button @click="pop" text="Paramètres" default-href="/"></ion-back-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Personnaliser mon profil</ion-title>
+				<ion-title>Mon profil</ion-title>
 			</IonToolbar>
 		</IonHeader>
 

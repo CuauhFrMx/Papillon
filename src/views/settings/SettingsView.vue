@@ -182,18 +182,24 @@
 
 <template>
     <ion-page ref="page">
-      <IonHeader class="AppHeader" collapse="fade" translucent>
+      <IonHeader class="AppHeader" translucent>
         <IonToolbar>
 
           <ion-buttons slot="start">
-            <ion-menu-button color="dark" mode="md"></ion-menu-button>
+            <ion-menu-button color="dark"></ion-menu-button>
           </ion-buttons>
 
-          <ion-title mode="md">Paramètres</ion-title>
+          <ion-title>Paramètres</ion-title>
         </IonToolbar>
       </IonHeader>
       
       <ion-content :fullscreen="true">
+        <IonHeader collapse="condense">
+			<IonToolbar>
+				<ion-title size="large">Paramètres</ion-title>
+			</IonToolbar>
+		</IonHeader>
+
         <IonList :inset="true" lines="inset">
             <ion-nav-link router-direction="forward" :component="UserView">
                 <IonItem button>
