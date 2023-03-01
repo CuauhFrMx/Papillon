@@ -207,10 +207,10 @@
 			<IonToolbar>
 
 				<ion-buttons slot="start">
-					<ion-menu-button color="dark" mode="md"></ion-menu-button>
+					<ion-menu-button color="dark"></ion-menu-button>
 				</ion-buttons>
 
-				<ion-title mode="md">Conversations</ion-title>
+				<ion-title>Conversations</ion-title>
 
 			</IonToolbar>
 		</IonHeader>
@@ -219,6 +219,12 @@
 			<ion-refresher slot="fixed" @ionRefresh="handleRefresh($event)">
 				<ion-refresher-content></ion-refresher-content>
 			</ion-refresher>
+
+			<IonHeader collapse="condense">
+				<IonToolbar>
+					<ion-title size="large">Conversations</ion-title>
+				</IonToolbar>
+			</IonHeader>
 
 			<IonFab slot="fixed" vertical="bottom" horizontal="end" class="newCoursBtnFab">
 				<ion-button @click="startNewChat()" size="large" shape="round" class="newCoursBtn" mode="md">

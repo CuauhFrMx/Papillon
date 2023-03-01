@@ -8,12 +8,13 @@
         IonRefresher,
 		IonRefresherContent,
         IonSkeletonText,
+        IonButtons,
+            IonBackButton
 	} from '@ionic/vue';
 
     import GetConversations from '@/functions/fetch/GetConversations.js';
 
     import ChatView from './ChatView.vue';
-    import PapillonBackButton from '@/components/PapillonBackButton.vue';
 
 	export default defineComponent({
 		name: 'FolderPage',
@@ -23,7 +24,8 @@
             IonRefresher,
             IonRefresherContent,
             IonSkeletonText,
-            PapillonBackButton
+            IonButtons,
+            IonBackButton
 		},
         props: {
             conversation: {
@@ -113,17 +115,16 @@
 		<IonToolbar>
 
 			<ion-buttons slot="start">
-				
-
-                <IonNavLink :component="ChatView" router-direction="back">
-                    <PapillonBackButton></PapillonBackButton>
-                </IonNavLink>
+				<ion-buttons slot="start">
+					<ion-back-button @click="pop" text="Retour" default-href="/"></ion-back-button>
+				</ion-buttons>
             </ion-buttons>
 
-            <ion-title mode="md" v-if="!conversation.subject">
+            <ion-title v-if="!conversation.subject">
                 <ion-skeleton-text :animated="true" style="width: 80%;"></ion-skeleton-text>
             </ion-title>
-			<ion-title v-else mode="md">{{ conversation.subject }}</ion-title>
+			<ion-title v-else-if="conversation.subject.length < 25">{{ conversation.subject }}</ion-title>
+            <ion-title v-else>{{ conversation.subject.substring(0,25) }}...</ion-title>
 
 		</IonToolbar>
 	</IonHeader>
